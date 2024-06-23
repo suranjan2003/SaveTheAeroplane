@@ -78,6 +78,47 @@ body{
     }
 }
 
+.cloud1{
+    background-image: url(cld1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 200px;
+    position: relative; /*posioning it to the bottom*/
+    top: 5%;
+    left: 5000px;
+}
+
+.cloud2{
+    background-image: url(cld2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 100px;
+    position: relative; /*posioning it to the bottom*/
+    top: 10%;
+    left: 4000px;
+    opacity: 70%;
+}
+
+.movecld1{
+    animation: cld1 25s linear infinite;
+}
+
+.movecld2{
+    animation: cld1 35s linear infinite;
+}
+
+@keyframes cld1{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -50vw;
+    }
+}
+
+
 .moveEnemy{
     animation: moveEnemy 5s linear infinite;
 }

@@ -34,7 +34,7 @@ setInterval(() => {
     offsetX = Math.abs(mx-ex);
     offsetY = Math.abs(my-ey);
 
-    if(offsetX<100 && offsetY<50){
+    if(offsetX<160 && offsetY<110){
         gameOver.innerHTML = "Game Over";
         enemy.classList.remove('moveEnemy');
         me.style.left = 50 + "px";
