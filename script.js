@@ -35,7 +35,7 @@ setInterval(() => {
     offsetY = Math.abs(my-ey);
 
     if(offsetX<100 && offsetY<50){
-        gameOver.innerHTML = "Game Over -> Reload";
+        gameOver.innerHTML = "Game Over";
         enemy.classList.remove('moveEnemy');
         me.style.left = 50 + "px";
         notcrossed=false;
