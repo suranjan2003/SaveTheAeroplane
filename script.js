@@ -42,7 +42,7 @@ function startGame() {
         let offsetY = Math.abs(my - ey);
 
         if (offsetX < 170 && offsetY < 110) {
-            gameOver.innerHTML = "Game Over -> Reload";
+            gameOver.innerHTML = "Game Over !";
             enemy.style.animationDuration = '0s'; // Stop enemy movement
             me.style.left = '50px'; // Reset player position
             notcrossed = false;
