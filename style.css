@@ -58,7 +58,16 @@ body{
     position: relative;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: burlywood;
+    color: rgb(242, 231, 217);
+    font-size: 20px;
+    padding-right: 0%;
+}
+
+#maxScoreCont{
+    position: relative;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(242, 231, 217);
     font-size: 20px;
     padding-right: 0%;
 }

@@ -1,5 +1,6 @@
 
 let score = 0;
+let maxscore = 0;
 // let enemySpeed = 5; // Initial speed of the enemy
 let notcrossed = true;
 let intervalId; // Store the interval ID for later use
@@ -37,7 +38,7 @@ function startGame() {
     // enemySpeed = 5; // Reset enemy speed
     const scoreCont = document.getElementById('scoreCont');
     scoreCont.innerHTML = "Your Score: " + score;
-    //document.querySelector('.gameOver').innerHTML = ""; // Clear game over message
+    document.querySelector('.gameOver').innerHTML = "The Fly High Game"; // keep the tittle mssge
     document.querySelector('.enemy').classList.add('moveEnemy'); // Start enemy movement
     document.querySelector('.myPlane').style.left = '50px'; // Reset player position
 
@@ -64,6 +65,10 @@ function startGame() {
             notcrossed = false;
             clearInterval(intervalId); // Stop the game loop
             isPlaying = false; // Set the game to not playing state
+            if(score > maxscore) {
+                newMaxscore(score);
+                maxscore = score;
+            }
 
         } else if (offsetX < 145 && notcrossed) {
             score += 1;
@@ -80,6 +85,11 @@ function startGame() {
 function newScore(score) {
     const scoreCont = document.getElementById('scoreCont');
     scoreCont.innerHTML = "Your Score: " + score;
+}
+
+function newMaxscore(maxscore){
+    const scoreCont = document.getElementById('maxScoreCont');
+    scoreCont.innerHTML = "Max Score: " + score;
 }
 
 
