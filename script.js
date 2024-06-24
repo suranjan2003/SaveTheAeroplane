@@ -38,7 +38,7 @@ function startGame() {
     // enemySpeed = 5; // Reset enemy speed
     const scoreCont = document.getElementById('scoreCont');
     scoreCont.innerHTML = "Your Score: " + score;
-    document.querySelector('.gameOver').innerHTML = "The Fly High Game"; // keep the tittle mssge
+    document.querySelector('.gameOver').innerHTML = "The Aero Adventure Game"; // keep the tittle mssge
     document.querySelector('.enemy').classList.add('moveEnemy'); // Start enemy movement
     document.querySelector('.myPlane').style.left = '50px'; // Reset player position
 
