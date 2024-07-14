@@ -1,7 +1,6 @@
 
 let score = 0;
 let maxscore = 0;
-// let enemySpeed = 5; // Initial speed of the enemy
 let notcrossed = true;
 let intervalId; // Store the interval ID for later use
 let isPlaying = false; // Flag to indicate if the game is in progress
@@ -41,7 +40,7 @@ function startGame() {
     document.querySelector('.gameOver').innerHTML = "The Aero Adventure Game"; // keep the tittle mssge
     document.querySelector('.enemy').classList.add('moveEnemy'); // Start enemy movement
     document.querySelector('.myPlane').style.left = '50px'; // Reset player position
-
+ 
     // Start the game loop
     intervalId = setInterval(() => {
         if (!isPlaying) return; // Skip the loop if the game is not playing
@@ -55,8 +54,10 @@ function startGame() {
         let ex = parseInt(window.getComputedStyle(enemy, null).getPropertyValue('left'));
         let ey = parseInt(window.getComputedStyle(enemy, null).getPropertyValue('top'));
 
+
         let offsetX = Math.abs(mx - ex);
         let offsetY = Math.abs(my - ey);
+
 
         if (offsetX < 170 && offsetY < 110) {
             gameOver.innerHTML = "Game Over !";
@@ -80,6 +81,7 @@ function startGame() {
         }
         
     }, 100);
+
 }
 
 function newScore(score) {
@@ -91,5 +93,3 @@ function newMaxscore(maxscore){
     const scoreCont = document.getElementById('maxScoreCont');
     scoreCont.innerHTML = "Max Score: " + score;
 }
-
-

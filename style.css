@@ -127,7 +127,6 @@ body{
     }
 }
 
-
 .moveEnemy{
     animation: moveEnemy 5s linear infinite;
 }
@@ -139,5 +138,4 @@ body{
         left: -10%;
     }
 }
-
 
